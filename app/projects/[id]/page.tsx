@@ -48,16 +48,16 @@ const works = [
     link: 'https://divacahealth.com',
     images: {
       logo: '/images/divacahealth/logo.png',
-      main: '/images/divacahealth/main.png',
+      main: '/images/divacahealth/divaca2.png',
       supporting: [
-        '/images/divacahealth/support1.png',
-        '/images/divacahealth/support2.png'
+        '/images/divacahealth/divaca1.png',
+        '/images/divacahealth/divaca3.png'
       ],
       Logoimg: [
-        '/images/playsphere/next.png',
-        '/images/playsphere/react.png',
-        '/images/playsphere/tailwind.png',
-        '/images/playsphere/js.png'
+        '/images/divacahealth/next.png',
+        '/images/divacahealth/react.png',
+        '/images/divacahealth/tailwind.png',
+        '/images/divacahealth/js.png'
       ]
     },
     techStack: [
@@ -83,15 +83,16 @@ const works = [
     link: 'https://portfolio.com',
     images: {
       logo: '/images/portfolio/logo.png',
-      main: '/images/portfolio/main.png',
+      main: '/images/portfolio/portfolio2.png',
       supporting: [
-        '/images/portfolio/support1.png'
+        '/images/portfolio/portfolio1.png',
+        '/images/portfolio/portfolio3.png'
       ],
       Logoimg: [
-        '/images/playsphere/next.png',
-        '/images/playsphere/react.png',
-        '/images/playsphere/tailwind.png',
-        '/images/playsphere/js.png'
+        '/images/portfolio/next.png',
+        '/images/portfolio/react.png',
+        '/images/portfolio/tailwind.png',
+        '/images/portfolio/js.png'
       ]
     },
     techStack: [
@@ -117,13 +118,16 @@ const works = [
     link: 'https://livestock.com',
     images: {
       logo: '/images/livestock/logo.png',
-      main: '/images/livestock/main.png',
-      supporting: [],
+      main: '/images/livestock/livestock1.png',
+      supporting: [
+       '/images/livestock/livestock2.png',
+       '/images/livestock/livestock3.png'
+      ],
       Logoimg: [
-        '/images/playsphere/next.png',
-        '/images/playsphere/react.png',
-        '/images/playsphere/tailwind.png',
-        '/images/playsphere/js.png'
+        '/images/livestock/next.png',
+        '/images/livestock/react.png',
+        '/images/livestock/tailwind.png',
+        '/images/livestock/js.png'
       ]
     },
     techStack: [
@@ -148,9 +152,12 @@ const works = [
     year: '2023',
     link: 'https://weather.com',
     images: {
-      logo: '/images/livestock/logo.png',
-      main: '/images/livestock/main.png',
-      supporting: [],
+      logo: '/images/weather/logo.png',
+      main: '/images/weather/weather1.png',
+      supporting: [
+        '/images/weather/weather2.png',
+        '/images/weather/weather3.png',
+      ],
       Logoimg: [
         '/images/playsphere/next.png',
         '/images/playsphere/react.png',
@@ -180,14 +187,17 @@ const works = [
     year: '2022',
     link: 'https://housing.com',
     images: {
-      logo: '/images/livestock/logo.png',
-      main: '/images/livestock/main.png',
-      supporting: [],
+      logo: '/images/housing/logo.png',
+      main: '/images/housing/housing1.png',
+      supporting: [
+        '/images/housing/housing2.png',
+        '/images/housing/housing3.png'
+      ],
       Logoimg: [
-        '/images/playsphere/next.png',
-        '/images/playsphere/react.png',
-        '/images/playsphere/tailwind.png',
-        '/images/playsphere/js.png'
+        '/images/housing/next.png',
+        '/images/housing/react.png',
+        '/images/housing/tailwind.png',
+        '/images/housing/js.png'
       ]
     },
     techStack: [
@@ -259,7 +269,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-black p-8 flex flex-col items-center">
+    <div className="min-h-screen bg-black p-8 flex flex-col items-center max-w-[1400px] m-auto">
       {/* TOP BAR */}
       <div className={`w-[70%] h-[70px] rounded-full flex justify-between items-center px-8 fixed top-5 z-50 transition-transform duration-500 ease-in-out ${
         showNav ? 'translate-y-0' : '-translate-y-32'
@@ -313,7 +323,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         {/* Project Hero */}
         <div className="mt-8 flex items-center gap-5">
           <div>
-            <img src={project.images.logo} alt='LOGO' className='w-[250px] h-[250px] rounded-[70px]' />
+            <img src={project.images.logo} alt='LOGO' className='w-[150px] h-[150px] rounded-[70px]' />
           </div>
           <div>
             <h3 className='text-5xl'>{project.title}</h3>
@@ -322,8 +332,8 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         </div>
 
         {/* Project main image */}
-        <div className='w-full h-[80vh] rounded-[50px] mt-16 flex items-center justify-center p-1'>
-          <img src={project.images.main} alt='' className='w-full h-full rounded-[50px]' />
+        <div className='w-full h-[600px] rounded-[50px] mt-16 flex items-center justify-center p-1 bg-opacity-100'>
+          <img src={project.images.main} alt='' className='w-full h-full rounded-[50px] z-10' />
         </div>
 
         {/* Project overview and Tech stack */}
@@ -366,23 +376,23 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         {/* project pictures */}
         {project.images.supporting.length > 0 && (
           <>
-            <div className='w-full h-[50vh] mt-10 flex gap-10 z-10'>
+            <div className='w-full h-[80vh]  mt-10 flex items-center justify-center gap-10 z-10'>
               {project.images.supporting[0] && (
-                <div className='h-full w-[60%] rounded-[50px] z-10'>
+                <div className='h-full w-[40%] rounded-[50px] z-10'>
                   <img src={project.images.supporting[0]} alt="" className='w-full h-full rounded-[50px]' />
                 </div>
               )}
               {project.images.supporting[1] && (
-                <div className='h-full w-[40%] rounded-[50px]'>
+                <div className='h-full w-[40%] rounded-[50px] z-10'>
                   <img src={project.images.supporting[1]} alt="" className='w-full h-full rounded-[50px]' />
                 </div>
               )}
             </div>
-            {project.images.supporting[2] && (
+            {/* {project.images.supporting[2] && (
               <div className='w-full h-[50vh] mt-10 rounded-[50px] z-10'>
                 <img src={project.images.supporting[2]} alt="" className='w-full h-full rounded-[50px]' />
               </div>
-            )}
+            )} */}
           </>
         )}
 
