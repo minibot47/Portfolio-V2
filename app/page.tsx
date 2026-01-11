@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react'; // Add useRef here
 
 const icons = [
   "/images/icon1.png",
@@ -82,16 +82,43 @@ const works = [
   }
 ];
 
-
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const sectionRef = useRef(null); // Move this inside the component
+  const [isVisible, setIsVisible] = useState(false);
 
+  // Title rotation effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
     }, 3000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  // Scroll animation effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -148,9 +175,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
       {/* WORKS*/}
       <div className="w-[100%] h-fit mb-40">
-        <div className="w-full overflow-hidden edge-fade">
+        <div 
+          ref={sectionRef}
+          className={`w-full overflow-hidden edge-fade transition-transform duration-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}
+        >
           <div className="flex w-max animate-scrollX gap-5">
             {[...projects, ...projects].map((project, i) => (
               <div
@@ -169,71 +200,71 @@ export default function Home() {
       </div>
 
       {/* Projects*/}
-<div className="bg-white w-[80%] h-fit">
-  <div className="min-h-screen bg-black p-8">
-    <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {works.map((work) => (
-          <Link 
-            key={work.id}
-            href={`/projects/${work.id}`}
-            className="group relative rounded-3xl overflow-visible transition-all duration-300 hover:scale-[1.02] block"
-          >
-            {/* Image Container - Behind, floating with glow */}
-            <div className="relative h-[450px] flex items-center justify-center p-8">
-              {/* Glow effect behind image on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-pink-500/0 group-hover:from-purple-500/30 group-hover:via-blue-500/30 group-hover:to-pink-500/30 blur-3xl transition-all duration-500 rounded-2xl"></div>
-              
-              <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-105 group-hover:-translate-y-2">
-                <img 
-                  src={work.image} 
-                  alt={work.title}
-                  className="w-full h-full object-cover rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
-                />
-              </div>
-            </div>
+      <div className="bg-white w-[80%] h-fit">
+        <div className="min-h-screen bg-black p-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {works.map((work) => (
+                <Link 
+                  key={work.id}
+                  href={`/projects/${work.id}`}
+                  className="group relative rounded-3xl overflow-visible transition-all duration-300 hover:scale-[1.02] block"
+                >
+                  {/* Image Container - Behind, floating with glow */}
+                  <div className="relative h-[450px] flex items-center justify-center p-8">
+                    {/* Glow effect behind image on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-pink-500/0 group-hover:from-purple-500/30 group-hover:via-blue-500/30 group-hover:to-pink-500/30 blur-3xl transition-all duration-500 rounded-2xl"></div>
+                    
+                    <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-105 group-hover:-translate-y-2">
+                      <img 
+                        src={work.image} 
+                        alt={work.title}
+                        className="w-full h-full object-cover rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                      />
+                    </div>
+                  </div>
 
-            {/* Content - In front, semi-transparent with backdrop blur */}
-            <div className="relative -mt-20 bg-[#0a0a0a]/80 backdrop-blur-md rounded-3xl border border-[#1a1a1a] p-6 space-y-2 transition-all duration-300 group-hover:bg-[#0a0a0a]/60 group-hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] z-10">
-              <p className="text-xs text-gray-500 uppercase tracking-wider">
-                {work.type}
-              </p>
-              <h3 className="text-3xl font-bold text-white">
-                {work.title}
-              </h3>
-              <p className="text-gray-400 text-sm">
-                {work.description}
-              </p>
-            </div>
+                  {/* Content - In front, semi-transparent with backdrop blur */}
+                  <div className="relative -mt-20 bg-[#0a0a0a]/80 backdrop-blur-md rounded-3xl border border-[#1a1a1a] p-6 space-y-2 transition-all duration-300 group-hover:bg-[#0a0a0a]/60 group-hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] z-10">
+                    <p className="text-xs text-gray-500 uppercase tracking-wider">
+                      {work.type}
+                    </p>
+                    <h3 className="text-3xl font-bold text-white">
+                      {work.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                      {work.description}
+                    </p>
+                  </div>
 
-            {/* Icon in corner */}
-            <div className="absolute bottom-6 right-6 w-12 h-12 bg-[#1a1a1a]/80 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110 z-20">
-              {work.icon}
+                  {/* Icon in corner */}
+                  <div className="absolute bottom-6 right-6 w-12 h-12 bg-[#1a1a1a]/80 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110 z-20">
+                    {work.icon}
+                  </div>
+                </Link>
+              ))}
             </div>
-          </Link>
-        ))}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {/* Contact*/}
       <div className="w-[80%] h-fit flex items-center justify-between mt-20">
         <div className="w-1/2 h-full  flex flex-col items-center justify-start">
-        <div className=" h-[50%] w-[70%] flex flex-col items-start gap-5">
-          <h2 className="text-white font-display text-6xl">Get in touch</h2>
-          <Link href="" className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
-            <img src="/images/icon10.svg" alt="ICON" className="h-[30px] w-[30px]"></img>
-            <h2 className="text-white text-2xl font-quintessential">toludairo534@gmail.com</h2>
-          </Link>
-          <Link href="" className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
-            <img src="/images/icon11.svg" alt="ICON" className="h-[30px] w-[30px]" ></img>
-            <h2 className="text-white text-2xl font-quintessential">Download resume</h2>
-          </Link>
-        </div>
+          <div className=" h-[50%] w-[70%] flex flex-col items-start gap-5">
+            <h2 className="text-white font-display text-6xl">Get in touch</h2>
+            <Link href="" className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
+              <img src="/images/icon10.svg" alt="ICON" className="h-[30px] w-[30px]"></img>
+              <h2 className="text-white text-2xl font-quintessential">toludairo534@gmail.com</h2>
+            </Link>
+            <Link href="" className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
+              <img src="/images/icon11.svg" alt="ICON" className="h-[30px] w-[30px]" ></img>
+              <h2 className="text-white text-2xl font-quintessential">Download resume</h2>
+            </Link>
+          </div>
         </div>
         <div className="w-1/2 h-fit  flex items-center justify-center">
-        <img src="/images/tolulope1.png" alt="profile" className="h-[600px] w-[420px] rounded-[11px]"></img>
+          <img src="/images/tolulope1.png" alt="profile" className="h-[600px] w-[420px] rounded-[11px]"></img>
         </div>
       </div>
 
@@ -242,13 +273,13 @@ export default function Home() {
         <div className=" w-1/2 h-1/2 flex items-center">
           <div className="flex gap-10 mr-10">
             <Link href="mailto:toludairo534@gmail.com?subject=Hello&body=I wanted to reach out about your services...">
-            <img src="/images/icon12.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
+              <img src="/images/icon12.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
             </Link>
             <Link href="https://github.com/minibot47">
-            <img src="/images/icon13.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
+              <img src="/images/icon13.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
             </Link>
             <Link href="https://www.linkedin.com/in/tolu-dairo-8344111b7/" >
-            <img src="/images/icon14.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
+              <img src="/images/icon14.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
             </Link>
           </div>
           <h2 className="text-white text-2xl font-londrina font-extrabold">Tolulope . D @ 2026</h2>
@@ -257,7 +288,8 @@ export default function Home() {
           <div className="relative w-fit px-7 py-2 flex items-center gap-2 rounded-[11px] border-[0.1px] border-white bg-black animated-border">
             <h3 className="text-white">Scroll to Top</h3>
             <img src="/images/icon15.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
-          </div></div>
+          </div>
+        </div>
       </footer>
 
     </main>
