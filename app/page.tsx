@@ -1,7 +1,8 @@
 'use client';
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from 'react'; // Add useRef here
+import { useState, useEffect, useRef } from 'react'; 
+import { useRouter } from "next/router";
 
 const icons = [
   "/images/icon1.png",
@@ -86,6 +87,9 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sectionRef = useRef(null); // Move this inside the component
   const [isVisible, setIsVisible] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  
 
   // Title rotation effect
   useEffect(() => {
@@ -121,12 +125,35 @@ export default function Home() {
     };
   }, []);
 
+  // Add this useEffect for the scroll behavior
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY < lastScrollY || currentScrollY < 10) {
+      // Scrolling up or at the top
+      setShowNav(true);
+    } else {
+      // Scrolling down
+      setShowNav(false);
+    }
+    
+    setLastScrollY(currentScrollY);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  
+  return () => window.removeEventListener('scroll', handleScroll);
+}, [lastScrollY]);
+
   return (
     <main className="min-h-screen bg-black flex flex-col items-center p-5">
       <div className="w-[80%] h-[100vh] flex flex-col items-center gap-5">
 
         {/* TOP BAR */}
-        <div className="w-[70%] h-[70px] rounded-full flex justify-between items-center px-8 bg-[#111]">
+        <div className={`w-[70%] h-[70px] rounded-full flex justify-between items-center px-8  fixed top-5 z-50 transition-transform duration-500 ease-in-out ${
+          showNav ? 'translate-y-0' : '-translate-y-32'
+        }`}>
           <div className="text-white">
             <h1 className="text-2xl font-quintessential font-semibold">TOLULOPE DAIRO</h1>
             <div className="relative h-6 overflow-hidden">
@@ -143,14 +170,36 @@ export default function Home() {
                 </h3>
               ))}
             </div>
-
-
           </div>
 
           <nav className="flex gap-2">
             <Link className="px-4 py-2 bg-[#19191F] rounded-[11px] text-white" href="/">Work</Link>
-            <Link className="px-4 py-2 bg-[#19191F] rounded-[11px] text-white" href="/">Resume</Link>
-            <Link className="px-4 py-2 bg-[#19191F] rounded-[11px] text-white" href="/">Contact</Link>
+            <Link
+              className="px-4 py-2 bg-[#19191F] rounded-[11px] text-white cursor-pointer"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({
+                  top: document.body.scrollHeight,
+                  behavior: 'smooth',
+                });
+              }}
+            >
+              Resume
+            </Link>
+            <Link
+              className="px-4 py-2 bg-[#19191F] rounded-[11px] text-white cursor-pointer"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({
+                  top: document.body.scrollHeight,
+                  behavior: 'smooth',
+                });
+              }}
+            >
+              Contact
+            </Link>
           </nav>
         </div>
 
@@ -264,11 +313,11 @@ export default function Home() {
       </div>
 
       {/* Contact*/}
-      <div className="w-[80%] h-fit flex items-center justify-between mt-20">
+      <div id="contact-section" className="w-[80%] h-fit flex items-center justify-between mt-20">
         <div className="w-1/2 h-full  flex flex-col items-center justify-start">
           <div className=" h-[50%] w-[70%] flex flex-col items-start gap-5">
             <h2 className="text-white font-display text-6xl">Get in touch</h2>
-            <Link href="" className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
+            <Link href="mailto:toludairo534@gmail.com?subject=Hello&body=I wanted to reach out about your services..." className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
               <img src="/images/icon10.svg" alt="ICON" className="h-[30px] w-[30px]"></img>
               <h2 className="text-white text-2xl font-quintessential">toludairo534@gmail.com</h2>
             </Link>
@@ -304,7 +353,7 @@ export default function Home() {
           <h2 className="text-white text-2xl font-londrina font-extrabold">Tolulope . D @ 2026</h2>
         </div>
         <div className="w-1/2 h-1/2 flex items-center justify-end ">
-          <div className="relative w-fit px-7 py-2 flex items-center gap-2 rounded-[11px] border-[0.1px] border-white bg-black animated-border">
+          <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="relative w-fit px-7 py-2 flex items-center gap-2 rounded-[11px] border-[0.1px] border-white bg-black animated-border cursor-pointer">
             <h3 className="text-white">Scroll to Top</h3>
             <img src="/images/icon15.svg" alt="ICON" className="w-[30px] h-[30px]"></img>
           </div>
