@@ -376,7 +376,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         {/* project pictures */}
         {project.images.supporting.length > 0 && (
           <>
-            <div className='w-full h-[80vh]  mt-10 flex items-center justify-center gap-10 z-10'>
+            <div className='w-full h-[650px]  mt-10 flex items-center justify-center gap-10 z-10'>
               {project.images.supporting[0] && (
                 <div className='h-full w-[40%] rounded-[50px] z-10'>
                   <img src={project.images.supporting[0]} alt="" className='w-full h-full rounded-[50px]' />
