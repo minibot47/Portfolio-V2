@@ -91,7 +91,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 3000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
@@ -129,7 +129,22 @@ export default function Home() {
         <div className="w-[70%] h-[70px] rounded-full flex justify-between items-center px-8 bg-[#111]">
           <div className="text-white">
             <h1 className="text-2xl font-quintessential font-semibold">TOLULOPE DAIRO</h1>
-            <h3 className="text-sm font-heading opacity-70">{titles[currentIndex]}</h3>
+            <div className="relative h-6 overflow-hidden">
+              {titles.map((title, index) => (
+                <h3
+                  key={index}
+                  className={`absolute left-0 w-full text-sm font-heading transition-all duration-[4000ms] ease-in-out transform ${
+                    index === currentIndex
+                      ? 'opacity-100 scale-100 translate-y-0'
+                      : 'opacity-0 scale-90 -translate-y-1'
+                  }`}
+                >
+                  {title}
+                </h3>
+              ))}
+            </div>
+
+
           </div>
 
           <nav className="flex gap-2">
@@ -141,7 +156,7 @@ export default function Home() {
 
         {/* HERO */}
         <div className="w-[80%] h-[80%] flex flex-col gap-5 items-center justify-center ">
-          <section className="relative overflow-hidden rounded-[40px] bg-black w-[50%] h-[50%] flex items-center justify-center">
+          <section className="relative overflow-hidden rounded-[40px]  w-[50%] h-[50%] flex items-center justify-center">
 
             {/* PROFILE IMAGE (SEPARATE) */}
             <div className="relative z-10 h-[260px] w-[260px] rounded-full border-[10px] border-gray-900 overflow-hidden">
@@ -166,7 +181,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <div className="w-[50%]">
+          <div className="w-[50%] z-10">
             <h3 className="text-white text-3xl text-center">Hi, <span className="font-londrina">i'm Tolulope</span> i specialize in developing fully functional, responsive <span className="font-quintessential">Web applications</span> and <span className="font-quintessential">websites</span> with seamless cross-browser compatibility.</h3>
           </div>
           <div className="relative w-fit px-4 py-2 flex items-center gap-2 rounded-[11px] bg-black animated-border">
@@ -237,10 +252,10 @@ export default function Home() {
                     </p>
                   </div>
 
-                  {/* Icon in corner */}
+                  {/* Icon in corner
                   <div className="absolute bottom-6 right-6 w-12 h-12 bg-[#1a1a1a]/80 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110 z-20">
                     {work.icon}
-                  </div>
+                  </div> */}
                 </Link>
               ))}
             </div>
@@ -257,19 +272,23 @@ export default function Home() {
               <img src="/images/icon10.svg" alt="ICON" className="h-[30px] w-[30px]"></img>
               <h2 className="text-white text-2xl font-quintessential">toludairo534@gmail.com</h2>
             </Link>
-            <Link href="" className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
+            <a
+              href="/files/Tolulope Dairo job CV.pdf"
+              download="Tolulope_Resume.pdf"
+              className="px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]"
+            >
               <img src="/images/icon11.svg" alt="ICON" className="h-[30px] w-[30px]" ></img>
               <h2 className="text-white text-2xl font-quintessential">Download resume</h2>
-            </Link>
+            </a>
           </div>
         </div>
-        <div className="w-1/2 h-fit  flex items-center justify-center">
+        <div className="w-1/2 h-fit  flex items-center z-10 justify-center">
           <img src="/images/tolulope1.png" alt="profile" className="h-[600px] w-[420px] rounded-[11px]"></img>
         </div>
       </div>
 
       {/* Footer*/}
-      <footer className="w-[80%] h-[80px] mt-20 flex items-center justify-between  ">
+      <footer className="w-[80%] h-[80px] mt-20 flex items-center justify-between ">
         <div className=" w-1/2 h-1/2 flex items-center">
           <div className="flex gap-10 mr-10">
             <Link href="mailto:toludairo534@gmail.com?subject=Hello&body=I wanted to reach out about your services...">

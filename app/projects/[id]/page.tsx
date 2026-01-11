@@ -227,21 +227,36 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 3000);
+  // Title rotation effect
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+  }, 8000);
 
-    return () => clearInterval(interval);
-  }, []);
-  
+  return () => clearInterval(interval);
+}, []);
   return (
-    <div className="min-h-screen bg-black p-8 flex flex-col items-center">
+    <div className="min-h-screen bg-black p-8 flex flex-col items-center ">
         {/* TOP BAR */}
-        <div className="w-[75%] h-[70px] mb-10 rounded-full flex justify-between items-center px-8 bg-[#111]">
+        <div className="w-[75%] h-[70px] rounded-full flex justify-between items-center px-8 bg-[#111]">
           <div className="text-white">
             <h1 className="text-2xl font-quintessential font-semibold">TOLULOPE DAIRO</h1>
-            <h3 className="text-sm font-heading opacity-70">{titles[currentTitleIndex]}</h3>
+            <div className="relative h-6 overflow-hidden">
+              {titles.map((title, index) => (
+                <h3
+                  key={index}
+                  className={`absolute left-0 w-full text-sm font-heading transition-all duration-[4000ms] ease-in-out transform ${
+                    index === currentTitleIndex
+                      ? 'opacity-100 scale-100 translate-y-0'
+                      : 'opacity-0 scale-90 -translate-y-1'
+                  }`}
+                >
+                  {title}
+                </h3>
+              ))}
+            </div>
+
+
           </div>
 
           <nav className="flex gap-2">
@@ -270,14 +285,14 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         </div>
 
         {/* Project overview and Tech stack*/}
-        <div className='w-full h-fit mt-16 flex items-stretch justify-between gap-8 rounded-[50px]'>
+        <div className='w-full h-fit mt-16 flex items-stretch z-10 justify-between gap-8 rounded-[50px]'>
             <div className='w-[60%] border-[0.1px] border-white p-5 flex flex-col gap-5 rounded-[50px]'>
                 <div className='border-b-[0.1px] border-b-white py-3'>
                     <h3 className='text-4xl font-bold'>Overview</h3>
                 </div>
                 <h3 className='w-full text-3xl'>{project.description}</h3>
             </div>
-            <div className='w-[40%] flex flex-col items-center justify-between gap-5'>
+            <div className='w-[40%] z-10  flex flex-col items-center justify-between gap-5'>
                 <div className='w-full border-[0.1px] rounded-[50px] border-white p-5 flex flex-col gap-3'>
                     <div className='border-b-[0.1px] border-b-white py-3'>
                         <h3 className='text-4xl font-bold'>Tech Stack</h3>
@@ -293,7 +308,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                     </div>
                     ))}
                 </div>
-                <div className='w-full border-[0.1px] rounded-[50px] border-white flex flex-col gap-5 p-8'>
+                <div className='w-full z-10  border-[0.1px] rounded-[50px] border-white flex flex-col gap-5 p-8'>
                     <div className='border-b-[0.1px] border-b-white py-3'>
                         <h3 className='text-4xl font-bold'>Created</h3>
                     </div>
@@ -307,15 +322,15 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         </div>
 
         {/* project pictures*/}
-        <div className='w-full h-[50vh] mt-10 flex gap-10'>
-            <div className=' h-full w-[60%] rounded-[50px]'>
+        <div className='w-full h-[50vh] mt-10 flex gap-10 z-10 '>
+            <div className=' h-full w-[60%] rounded-[50px] z-10 '>
                 <img src={project.images.supporting[0]} className='w-full h-full rounded-[50px]'></img>
             </div>
             <div className='h-full w-[40%] rounded-[50px]'>
                 <img src={project.images.supporting[1]} className='w-full h-full rounded-[50px]'></img>
             </div>
         </div>
-        <div className='w-full h-[50vh] mt-10 rounded-[50px]'>
+        <div className='w-full h-[50vh] mt-10 rounded-[50px] z-10 '>
             <img src={project.images.supporting[2]} className='w-full h-full rounded-[50px]'></img>
         </div>
 
@@ -349,7 +364,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         </div>
       </div>
         {/* Footer*/}
-        <footer className="w-[80%] h-[100px] mt-20 flex items-center justify-between mb-[100px] ">
+        <footer className="w-[80%] h-[100px] mt-20 flex items-center justify-between z-10  mb-[100px]  ">
             <div className=" w-1/2 h-1/2 flex items-center">
             <div className="flex gap-10 mr-10">
                 <Link href="mailto:toludairo534@gmail.com?subject=Hello&body=I wanted to reach out about your services...">

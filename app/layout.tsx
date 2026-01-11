@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, Poppins, Fira_Code, Playfair_Display, Quintessential ,Londrina_Shadow  } from "next/font/google";
+import Starfield from "./components/starfield";
 
 export const metadata = {
   title: 'Portfolio',
@@ -33,19 +34,20 @@ const playfair = Playfair_Display({
 const quintessential = Quintessential({
   subsets: ["latin"],
   variable: "--font-quintessential",
-  weight: ["400"], // Quintessential only has one weight
+  weight: ["400"],
 });
 
 const londrinaShadow = Londrina_Shadow({
   subsets: ["latin"],
   variable: "--font-londrina-shadow",
-  weight: ["400"], // Londrina Shadow only has one weight
+  weight: ["400"],
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} ${firaCode.variable} ${playfair.variable} ${quintessential.variable} ${londrinaShadow.variable} bg-black`}>
+        <Starfield />
         {children}
       </body>
     </html>
