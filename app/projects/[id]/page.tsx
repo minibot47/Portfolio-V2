@@ -265,8 +265,8 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         </div>
 
         {/* Project main image*/}
-        <div className='w-full h-[80vh] bg-black rounded-[50px] mt-16 flex items-center justify-center '>
-            <img src={project.images.main} alt='' className=' w-full h-full bg-green-500 rounded-[50px]'></img>
+        <div className='w-full h-[80vh]  rounded-[50px] mt-16 flex items-center justify-center p-1 '>
+            <img src={project.images.main} alt='' className=' w-full h-full rounded-[50px]'></img>
         </div>
 
         {/* Project overview and Tech stack*/}

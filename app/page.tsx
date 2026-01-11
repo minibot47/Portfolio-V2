@@ -169,52 +169,53 @@ export default function Home() {
       </div>
 
       {/* Projects*/}
-      <div className="bg-white w-[80%] h-fit">
-        <div className="min-h-screen bg-black p-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {works.map((work) => (
-                <Link 
-                  key={work.id}
-                  href={`/projects/${work.id}`}  // or work.slug if you have one
-                  className="group relative bg-[#0a0a0a] rounded-3xl overflow-hidden border border-[#1a1a1a] transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] block"
-                >
-                  {/* Image Container */}
-                  <div className="relative h-[450px] bg-gradient-to-b from-[#111] to-[#0a0a0a] flex items-center justify-center overflow-hidden">
-                    <div className="relative w-full h-full flex items-center justify-center p-8 transition-transform duration-300 group-hover:scale-105">
-                      <img 
-                        src={work.image} 
-                        alt={work.title}
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </div>
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 space-y-2">
-                    <p className="text-xs text-gray-500 uppercase tracking-wider">
-                      {work.type}
-                    </p>
-                    <h3 className="text-3xl font-bold text-white">
-                      {work.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm">
-                      {work.description}
-                    </p>
-                  </div>
-
-                  {/* Icon in corner */}
-                  <div className="absolute bottom-6 right-6 w-12 h-12 bg-[#1a1a1a] rounded-xl flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110">
-                    {work.icon}
-                  </div>
-                </Link>
-              ))}
+<div className="bg-white w-[80%] h-fit">
+  <div className="min-h-screen bg-black p-8">
+    <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {works.map((work) => (
+          <Link 
+            key={work.id}
+            href={`/projects/${work.id}`}
+            className="group relative rounded-3xl overflow-visible transition-all duration-300 hover:scale-[1.02] block"
+          >
+            {/* Image Container - Behind, floating with glow */}
+            <div className="relative h-[450px] flex items-center justify-center p-8">
+              {/* Glow effect behind image on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-pink-500/0 group-hover:from-purple-500/30 group-hover:via-blue-500/30 group-hover:to-pink-500/30 blur-3xl transition-all duration-500 rounded-2xl"></div>
+              
+              <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-105 group-hover:-translate-y-2">
+                <img 
+                  src={work.image} 
+                  alt={work.title}
+                  className="w-full h-full object-cover rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                />
+              </div>
             </div>
-          </div>
-        </div>
+
+            {/* Content - In front, semi-transparent with backdrop blur */}
+            <div className="relative -mt-20 bg-[#0a0a0a]/80 backdrop-blur-md rounded-3xl border border-[#1a1a1a] p-6 space-y-2 transition-all duration-300 group-hover:bg-[#0a0a0a]/60 group-hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] z-10">
+              <p className="text-xs text-gray-500 uppercase tracking-wider">
+                {work.type}
+              </p>
+              <h3 className="text-3xl font-bold text-white">
+                {work.title}
+              </h3>
+              <p className="text-gray-400 text-sm">
+                {work.description}
+              </p>
+            </div>
+
+            {/* Icon in corner */}
+            <div className="absolute bottom-6 right-6 w-12 h-12 bg-[#1a1a1a]/80 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110 z-20">
+              {work.icon}
+            </div>
+          </Link>
+        ))}
       </div>
+    </div>
+  </div>
+</div>
 
       {/* Contact*/}
       <div className="w-[80%] h-fit flex items-center justify-between mt-20">
