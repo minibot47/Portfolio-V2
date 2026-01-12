@@ -333,7 +333,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         </div>
 
         {/* Project main image */}
-        <div className='w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] mt-8 md:mt-16 flex items-center justify-center p-1 bg-opacity-100'>
+        <div className='w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-none md:rounded-[40px] lg:rounded-[50px] mt-8 md:mt-16 flex items-center justify-center p-1 bg-opacity-100'>
           <img src={project.images.main} alt='' className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10 object-cover' />
         </div>
 
@@ -380,12 +380,12 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             <div className='w-full h-auto md:h-[400px] lg:h-[550px] xl:h-[650px] mt-6 md:mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10 z-10'>
               {project.images.supporting[0] && (
                 <div className='h-[300px] md:h-full w-full md:w-[40%] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10'>
-                  <img src={project.images.supporting[0]} alt="" className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-[50px] object-cover' />
+                  <img src={project.images.supporting[0]} alt="" className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-none object-scale-down' />
                 </div>
               )}
               {project.images.supporting[1] && (
                 <div className='h-[300px] md:h-full w-full md:w-[40%] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10'>
-                  <img src={project.images.supporting[1]} alt="" className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-[50px] object-cover' />
+                  <img src={project.images.supporting[1]} alt="" className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-none object-scale-down' />
                 </div>
               )}
             </div>
@@ -404,13 +404,13 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         </div>
 
         {/* Next project */}
-        <div className='mt-6 md:mt-10 w-full h-fit'>
+        <div className='mt-6 md:mt-10 w-full h-fit z-10'>
           <h3 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-3 md:mb-4'>Next Project</h3>
           <Link 
             href={`/projects/${nextProject.id}`}
             className='group block'
           >
-            <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between w-full sm:w-fit gap-4 sm:gap-10'>
+            <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between w-full sm:w-fit gap-4 sm:gap-10 z-10'>
               <div>
                 <p className='text-xs md:text-sm text-gray-500 uppercase mb-2'>{nextProject.type}</p>
                 <h3 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white group-hover:text-gray-400 transition-colors'>
