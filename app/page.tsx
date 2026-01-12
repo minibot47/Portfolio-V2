@@ -204,7 +204,7 @@ useEffect(() => {
         </div>
 
         {/* HERO */}
-        <div className="w-full sm:w-[85%] lg:w-[80%] flex flex-col gap-5 items-center justify-center mt-20">
+        <div className="w-full sm:w-[85%] lg:w-[80%] flex flex-col gap-5 items-center justify-center mt-15 sm:mt-20">
           <section className="relative overflow-hidden rounded-[30px] sm:rounded-[40px] w-full sm:w-[70%] lg:w-[50%] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center">
 
             {/* PROFILE IMAGE (SEPARATE) */}
@@ -230,7 +230,7 @@ useEffect(() => {
               </div>
             </div>
           </section>
-          <div className="w-full sm:w-[70%] lg:w-[60%] z-10">
+          <div className="w-full sm:w-[70%] lg:w-[70%] z-10">
             <h3 className="text-white text-xl sm:text-2xl lg:text-3xl text-center leading-relaxed sm:leading-9">Hi, <span className="font-londrina">i'm Tolulope</span> i specialize in developing fully functional, responsive <span className="font-quintessential">Web applications</span> and <span className="font-quintessential">websites</span> with seamless cross-browser compatibility.</h3>
           </div>
           <div className="relative w-fit px-4 py-2 flex items-center gap-2 rounded-[11px] bg-black animated-border">
@@ -241,7 +241,7 @@ useEffect(() => {
       </div>
       
       {/* WORKS*/}
-      <div className="w-full h-fit mb-20 sm:mb-32">
+      <div className="w-full h-fit mb-15 mt-20 sm:mb-32">
         <div 
           ref={sectionRef}
           className={`w-full overflow-hidden edge-fade transition-transform duration-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}
