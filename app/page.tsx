@@ -313,7 +313,7 @@ useEffect(() => {
       </div>
 
       {/* Contact*/}
-      <div id="contact-section" className="w-[95%] md:w-[85%] h-fit flex flex-col lg:flex-row items-center justify-between mt-16 md:mt-20 gap-10">
+      <div id="contact-section" className="w-[95%] md:w-[85%] z-10 h-fit flex flex-col lg:flex-row items-center justify-between mt-16 md:mt-20 gap-10">
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center lg:items-start justify-start">
           <div className="w-full sm:w-[80%] flex flex-col items-start gap-4 sm:gap-5">
             <h2 className="text-white font-display text-4xl sm:text-5xl lg:text-6xl text-center lg:text-left">Get in touch</h2>
