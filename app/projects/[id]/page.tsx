@@ -14,7 +14,7 @@ const works = [
     type: 'Web App',
     description: 'About the project',
     year: '2024',
-    link: 'https://playsphere-divaca.onrender.com/',
+    link: 'https://playsphere.vercel.app/',
     images: {
       logo: '/images/playsphere/logo.png',
       main: '/images/playsphere/playsphere4.png',
@@ -45,7 +45,7 @@ const works = [
     type: 'Web App',
     description: 'Healthcare management platform',
     year: '2024',
-    link: 'https://divacahealth-divaca.onrender.com/',
+    link: 'https://www.divacahealth.com/',
     images: {
       logo: '/images/divacahealth/logo.png',
       main: '/images/divacahealth/divaca2.png',
@@ -80,7 +80,7 @@ const works = [
     type: 'Website',
     description: 'Modern portfolio template',
     year: '2023',
-    link: 'https://portfolio-version-1.onrender.com/',
+    link: 'https://portfolio-one-lilac-25.vercel.app/',
     images: {
       logo: '/images/portfolio/logo.png',
       main: '/images/portfolio/portfolio2.png',
@@ -115,7 +115,7 @@ const works = [
     type: 'Web App',
     description: 'Comprehensive livestock tracking',
     year: '2023',
-    link: 'https://livestock-health-management-system.onrender.com/',
+    link: 'https://final-year-project-navy-three.vercel.app/',
     images: {
       logo: '/images/livestock/logo.png',
       main: '/images/livestock/livestock1.png',
@@ -150,7 +150,7 @@ const works = [
     type: 'Web App',
     description: 'Real-time weather application',
     year: '2023',
-    link: 'https://weather-forecasting-project.onrender.com/',
+    link: 'https://weather-project-kmo6.onrender.com/',
     images: {
       logo: '/images/weather/logo.png',
       main: '/images/weather/weather1.png',
