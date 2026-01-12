@@ -3,7 +3,7 @@ import { Inter, Poppins, Fira_Code, Playfair_Display, Quintessential ,Londrina_S
 import Starfield from "./components/starfield";
 
 export const metadata = {
-  title: 'Portfolio',
+  title: 'Tolulope Dairo',
   description: 'My Next.js Portfolio',
 };
 
