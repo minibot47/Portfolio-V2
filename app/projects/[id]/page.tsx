@@ -12,7 +12,7 @@ const works = [
     slug: 'playsphere',
     title: 'Playsphere By Divaca',
     type: 'Web App',
-    description: 'About the project',
+    description: 'A fully functional web application dedicated to helping Gamers and managers to edit , createand manage games and tournaments',
     year: '2024',
     link: 'https://playsphere.vercel.app/',
     images: {
@@ -36,14 +36,14 @@ const works = [
       'Tailwind CSS',
       'JavaScript'
     ],
-    devInfo: 'Supporting information about the development process, challenges, and solutions.',
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , createand manage games and tournaments',
   },
   {
     id: '2',
     slug: 'divaca-health',
     title: 'DivacaHealth By Divaca',
     type: 'Web App',
-    description: 'Healthcare management platform',
+    description: 'A fully functional web application dedicated to helping healthcare professionals to manage patients, appointments, and medical records',
     year: '2024',
     link: 'https://www.divacahealth.com/',
     images: {
@@ -66,7 +66,7 @@ const works = [
       'Tailwind CSS',
       'JavaScript'
     ],
-    devInfo: 'Built to streamline healthcare operations...',
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help healthcare professionals to manage patients, appointments, and medical records',
     features: [
       'Patient management',
       'Appointment scheduling',
@@ -78,7 +78,7 @@ const works = [
     slug: 'portfolio-type-1',
     title: 'Portfolio Version 1',
     type: 'Website',
-    description: 'Modern portfolio template',
+    description: 'A fully functional website dedicated to helping professionals to manage their projects, tasks, and goals',
     year: '2023',
     link: 'https://portfolio-one-lilac-25.vercel.app/',
     images: {
@@ -101,7 +101,7 @@ const works = [
       'Tailwind CSS',
       'JavaScript'
     ],
-    devInfo: 'Clean and minimalist design approach...',
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help professionals to manage their projects, tasks, and goals',
     features: [
       'Responsive design',
       'Dark mode',
@@ -113,7 +113,7 @@ const works = [
     slug: 'livestock-management',
     title: 'Livestock Health Management System',
     type: 'Web App',
-    description: 'Comprehensive livestock tracking',
+    description: 'A fully functional web application dedicated to helping farmers to manage their livestock health',
     year: '2023',
     link: 'https://final-year-project-navy-three.vercel.app/',
     images: {
@@ -136,7 +136,7 @@ const works = [
       'Tailwind CSS',
       'JavaScript'
     ],
-    devInfo: 'Designed for farmers to track animal health...',
+    devInfo: 'Using Next.js, React, VanillaCSS, and JavaScript, The project was created to help farmers to manage their livestock health',
     features: [
       'Health monitoring',
       'Vaccination tracking',
@@ -148,7 +148,7 @@ const works = [
     slug: 'weather-project',
     title: 'Weather Forecasting Project',
     type: 'Web App',
-    description: 'Real-time weather application',
+    description: 'A fully functional web application dedicated to helping users to get the current weather and forecast of a anylocation',
     year: '2023',
     link: 'https://weather-project-kmo6.onrender.com/',
     images: {
@@ -168,10 +168,10 @@ const works = [
     techStack: [
       'Next.js',
       'React',
-      'Tailwind CSS',
+      'Vanilla CSS',
       'JavaScript'
     ],
-    devInfo: 'Displays current weather and forecasts...',
+    devInfo: 'Using Next.js, React, VanillaCSS, and JavaScript, The project was created to help users to get the current weather and forecast of a anylocation',
     features: [
       'Current conditions',
       '7-day forecast',
@@ -183,7 +183,7 @@ const works = [
     slug: 'housing-miniproject',
     title: 'Housing Miniproject',
     type: 'Website',
-    description: 'Housing marketplace platform',
+    description: 'A fully functional minimalistic website dedicated to helping users to find and rent a house',
     year: '2022',
     link: 'https://react-housing-project.onrender.com/',
     images: {
@@ -203,10 +203,10 @@ const works = [
     techStack: [
       'Next.js',
       'React',
-      'Tailwind CSS',
+      'Vanilla CSS',
       'JavaScript'
     ],
-    devInfo: 'Simple platform for browsing housing listings...',
+    devInfo: 'Using Next.js, React, VanillaCSS, and JavaScript, The project was created to help users to find and rent a house',
     features: [
       'Property listings',
       'Search filters',

@@ -37,7 +37,7 @@ const works = [
     id: 1,
     type: "WEB APP",
     title: "Playsphere By Divaca",
-    description: "Navigate the world of web technology",
+    description: "Navigate the world of proper Game Management",
     image: "/images/playsphere/playsphere4.png",
     icon: "📱"
   },
@@ -45,7 +45,7 @@ const works = [
     id: 2,
     type: "WEB APP",
     title: "DivacaHealth By Divaca",
-    description: "Modern analytics for the modern world",
+    description: "Modern analytics for the modern world of healthcare",
     image: "/images/divacahealth/divaca2.png",
     icon: "💻"
   },
@@ -53,7 +53,7 @@ const works = [
     id: 3,
     type: "Website",
     title: "Portfolio Version 1",
-    description: "Manage your finances with ease",
+    description: "Manage your projects with ease",
     image: "/images/portfolio/portfolio2.png",
     icon: "💰"
   },
@@ -61,7 +61,7 @@ const works = [
     id: 4,
     type: "WEB APP",
     title: "Livestock Health Management System",
-    description: "A beautiful home for your books",
+    description: "A practical system for managing livestock health",
     image: "/images/livestock/livestock1.png",
     icon: "📚"
   },
@@ -69,7 +69,7 @@ const works = [
     id: 5,
     type: "Web App",
     title: "Weather Forecasting Project",
-    description: "Track your progress and goals",
+    description: "Track your weather forecast progress",
     image: "/images/weather/weather1.png",
     icon: "📊"
   },
@@ -77,7 +77,7 @@ const works = [
     id: 6,
     type: "website",
     title: "Housing Miniproject",
-    description: "Your personal workout companion",
+    description: "Your personal housing companion",
     image: "/images/housing/housing1.png",
     icon: "🏋️"
   }
