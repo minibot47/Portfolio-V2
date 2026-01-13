@@ -89,6 +89,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [emailCopied, setEmailCopied] = useState(false);
   
 
   // Title rotation effect
@@ -317,10 +318,23 @@ useEffect(() => {
         <div className="w-full lg:w-1/2 h-full flex flex-col items-center lg:items-start justify-start">
           <div className="w-full sm:w-[80%] flex flex-col items-start gap-4 sm:gap-5">
             <h2 className="text-white font-display text-4xl sm:text-5xl lg:text-6xl text-center lg:text-left">Get in touch</h2>
-            <Link href="mailto:toludairo534@gmail.com?subject=Hello&body=I wanted to reach out about your services..." className="w-full px-4 sm:px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]">
+            <button 
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText('toludairo534@gmail.com');
+                  setEmailCopied(true);
+                  setTimeout(() => setEmailCopied(false), 2000);
+                } catch (err) {
+                  console.error('Failed to copy:', err);
+                }
+              }}
+              className="w-full px-4 sm:px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px] cursor-pointer hover:bg-gray-800 transition-colors"
+            >
               <img src="/images/icon10.svg" alt="ICON" className="h-[24px] w-[24px] sm:h-[30px] sm:w-[30px]"></img>
-              <h2 className="text-white text-lg sm:text-2xl font-quintessential break-words text-center">toludairo534@gmail.com</h2>
-            </Link>
+              <h2 className="text-white text-lg sm:text-2xl font-quintessential break-words text-center">
+                {emailCopied ? 'Copied!' : 'toludairo534@gmail.com'}
+              </h2>
+            </button>
             <a
               href="/files/Tolulope Dairo job CV.pdf"
               download="Tolulope_Resume.pdf"
