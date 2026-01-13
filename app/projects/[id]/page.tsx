@@ -36,7 +36,7 @@ const works = [
       'Tailwind CSS',
       'JavaScript'
     ],
-    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , createand manage games and tournaments',
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
   },
   {
     id: '2',
