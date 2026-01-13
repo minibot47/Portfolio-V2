@@ -5,6 +5,9 @@ import Starfield from "./components/starfield";
 export const metadata = {
   title: 'Tolulope Dairo',
   description: 'My Next.js Portfolio',
+  icons: {
+    icon: '/images/icon.png', 
+  },
 };
 
 const inter = Inter({
