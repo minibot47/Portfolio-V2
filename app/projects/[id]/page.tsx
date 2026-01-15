@@ -295,7 +295,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         <nav className="flex flex-wrap gap-2 justify-center md:justify-end w-full md:w-auto">
           <Link className="px-3 md:px-4 py-1.5 md:py-2 bg-[#19191F] rounded-[11px] text-white text-sm md:text-base" href="/">Work</Link>
           <a
-            href="/files/Tolulope Dairo job CV.pdf"
+            href="https://docs.google.com/document/d/1fq0caSFQqXMcVf9HfOXh-aP9jI3iXogYNyskdxOzhQA/edit?usp=sharing"
             download="Tolulope_Resume.pdf"
             className="px-3 md:px-4 py-1.5 md:py-2 flex gap-2 md:gap-3 items-center justify-center bg-[#19191F] rounded-[11px] text-white cursor-pointer text-sm md:text-base"
           >
