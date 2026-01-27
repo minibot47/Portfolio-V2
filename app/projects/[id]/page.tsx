@@ -334,7 +334,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
         {/* Project main image */}
         <div className='w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-none md:rounded-[40px] lg:rounded-[50px] mt-8 md:mt-16 flex items-center justify-center p-1 bg-opacity-100'>
-          <img src={project.images.main} alt='' className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10 object-cover' />
+          <img src={project.images.main} alt='' className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10 object-contain' />
         </div>
 
         {/* Project overview and Tech stack */}
