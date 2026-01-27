@@ -367,7 +367,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               </div>
               <h3 className='text-xl md:text-2xl lg:text-3xl'>{project.year}</h3>
             </div>
-            <Link href={project.link} className='w-full bg-[#0000EE] border-[0.1px] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-white p-4 md:p-5 px-6 md:px-8 flex items-center justify-between'>
+            <Link href={project.link} className='w-full bg-[#2525b4] border-[0.1px] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-white p-4 md:p-5 px-6 md:px-8 flex items-center justify-between'>
               <h3 className='text-lg md:text-2xl lg:text-3xl'>See Website</h3>
               <img src="/images/icon16.svg" alt="ICON" className="w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px]" />
             </Link>
@@ -384,7 +384,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                 </div>
               )}
               {project.images.supporting[1] && (
-                <div className='h-[300px] md:h-full w-full md:w-[40%] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10'>
+                <div className='h-[300px] md:h-full w-full md:w-[40%]  md:rounded-[40px] lg:rounded-[50px] z-10'>
                   <img src={project.images.supporting[1]} alt="" className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-none object-scale-down' />
                 </div>
               )}

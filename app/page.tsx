@@ -251,12 +251,12 @@ useEffect(() => {
             {[...projects, ...projects].map((project, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 h-[220px] w-[280px] sm:h-[320px] sm:w-[380px] lg:h-[350px] lg:w-[450px] rounded-[16px] overflow-hidden bg-white/10 backdrop-blur"
+                className="flex-shrink-0 h-[220px] w-[280px] sm:h-[320px] sm:w-[380px] lg:h-[350px] lg:w-[450px] rounded-[16px] overflow-hidden  backdrop-blur"
               >
                 <img 
                   src={project} 
                   alt="" 
-                  className="h-full w-full object-cover" 
+                  className="h-full w-full object-scale-down" 
                 />
               </div>
             ))}
@@ -276,7 +276,7 @@ useEffect(() => {
                   className="group relative rounded-3xl overflow-visible transition-all duration-300 hover:scale-[1.02] block"
                 >
                   {/* Image Container - Behind, floating with glow */}
-                  <div className="relative h-[320px] sm:h-[380px] lg:h-[450px] flex items-center justify-center p-6 sm:p-8">
+                  <div className="relative h-[320px] sm:h-[380px] lg:h-[450px] flex items-center justify-center p-6 sm:p-8 ">
                     {/* Glow effect behind image on hover */}
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-pink-500/0 group-hover:from-purple-500/30 group-hover:via-blue-500/30 group-hover:to-pink-500/30 blur-3xl transition-all duration-500 rounded-2xl"></div>
                     
@@ -284,7 +284,7 @@ useEffect(() => {
                       <img 
                         src={work.image} 
                         alt={work.title}
-                        className="w-full h-full object-cover rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                        className="w-full h-full object-cover rounded-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                       />
                     </div>
                   </div>
