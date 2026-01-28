@@ -296,6 +296,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           <Link className="px-3 md:px-4 py-1.5 md:py-2 bg-[#19191F] rounded-[11px] text-white text-sm md:text-base" href="/">Work</Link>
           <a
             href="https://docs.google.com/document/d/1Qw3SdOQbAOG7AKbO4uHqVGlNJr8LcFSlDbDRGH4bL18/edit?usp=sharing"
+            target="_blank"
             download="Tolulope_Resume.pdf"
             className="px-3 md:px-4 py-1.5 md:py-2 flex gap-2 md:gap-3 items-center justify-center bg-[#19191F] rounded-[11px] text-white cursor-pointer text-sm md:text-base"
           >
@@ -367,7 +368,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               </div>
               <h3 className='text-xl md:text-2xl lg:text-3xl'>{project.year}</h3>
             </div>
-            <Link href={project.link} className='w-full bg-[#2525b4] border-[0.1px] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-white p-4 md:p-5 px-6 md:px-8 flex items-center justify-between'>
+            <Link href={project.link} target="_blank" className='w-full bg-[#2525b4] border-[0.1px] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] border-white p-4 md:p-5 px-6 md:px-8 flex items-center justify-between'>
               <h3 className='text-lg md:text-2xl lg:text-3xl'>See Website</h3>
               <img src="/images/icon16.svg" alt="ICON" className="w-[25px] h-[25px] md:w-[30px] md:h-[30px] lg:w-[35px] lg:h-[35px]" />
             </Link>
