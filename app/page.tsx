@@ -336,7 +336,7 @@ useEffect(() => {
               </h2>
             </button>
             <a
-              href="https://docs.google.com/document/d/1fq0caSFQqXMcVf9HfOXh-aP9jI3iXogYNyskdxOzhQA/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1Qw3SdOQbAOG7AKbO4uHqVGlNJr8LcFSlDbDRGH4bL18/edit?usp=sharing"
               // download="Tolulope_Resume.pdf"
               className="w-full px-4 sm:px-5 py-3 flex items-center justify-center gap-3 bg-gray-900 rounded-[11px]"
             >
