@@ -370,7 +370,7 @@ useEffect(() => {
             <Link href="https://github.com/minibot47">
               <img src="/images/icon13.svg" alt="ICON" className="w-[24px] h-[24px] sm:w-[26px] sm:h-[26px] md:w-[30px] md:h-[30px]"></img>
             </Link>
-            <Link href="https://www.linkedin.com/in/tolu-dairo-8344111b7/" >
+            <Link href="https://www.linkedin.com/in/toludairo/" >
               <img src="/images/icon14.svg" alt="ICON" className="w-[24px] h-[24px] sm:w-[26px] sm:h-[26px] md:w-[30px] md:h-[30px]"></img>
             </Link>
           </div>
