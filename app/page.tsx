@@ -148,7 +148,7 @@ useEffect(() => {
 }, [lastScrollY]);
 
   return (
-    <main className="min-h-screen bg-black flex flex-col items-center p-4 md:p-5 max-w-[1400px] m-auto">
+    <main className="min-h-screen bg-black flex flex-col items-center p-3 md:p-4 max-w-[1400px] m-auto">
       <div className="w-[95%] md:w-[90%] lg:w-[80%] min-h-screen flex flex-col items-center gap-5">
 
         {/* TOP BAR */}
@@ -205,7 +205,7 @@ useEffect(() => {
         </div>
 
         {/* HERO */}
-        <div className="w-full sm:w-[85%] lg:w-[80%] flex flex-col gap-10 items-center justify-center sm:mt-20 mt-20 ">
+        <div className="w-full sm:w-[85%] lg:w-[80%] flex flex-col gap-7 items-center justify-center sm:mt-20 mt-20 ">
           <section className="relative overflow-hidden rounded-[30px] sm:rounded-[40px] w-full sm:w-[70%] lg:w-[50%] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center">
 
             {/* PROFILE IMAGE (SEPARATE) */}
@@ -266,9 +266,9 @@ useEffect(() => {
 
       {/* Projects*/}
       <div className="bg-white/5 w-[95%] md:w-[85%] h-fit rounded-3xl">
-        <div className="min-h-screen bg-black p-5 sm:p-8 rounded-3xl">
+        <div className="min-h-screen bg-black p-5 sm:p-8 sm:bg-red-500 rounded-3xl">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-5">
               {works.map((work) => (
                 <Link 
                   key={work.id}
@@ -276,7 +276,7 @@ useEffect(() => {
                   className="group relative rounded-3xl overflow-visible transition-all duration-300 hover:scale-[1.02] block"
                 >
                   {/* Image Container - Behind, floating with glow */}
-                  <div className="relative h-[320px] sm:h-[380px] lg:h-[450px] flex items-center justify-center p-6 sm:p-8 ">
+                  <div className="relative h-[350px] sm:h-[380px] lg:h-[450px] flex items-center justify-center p-4 sm:p-3 ">
                     {/* Glow effect behind image on hover */}
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-pink-500/0 group-hover:from-purple-500/30 group-hover:via-blue-500/30 group-hover:to-pink-500/30 blur-3xl transition-all duration-500 rounded-2xl"></div>
                     
@@ -284,7 +284,7 @@ useEffect(() => {
                       <img 
                         src={work.image} 
                         alt={work.title}
-                        className="w-full h-full object-cover rounded-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+                        className="w-full h-full object-cover rounded-[15px] sm:rounded-[30px] shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                       />
                     </div>
                   </div>
