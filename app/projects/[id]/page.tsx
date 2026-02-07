@@ -40,6 +40,37 @@ const works = [
   },
   {
     id: '2',
+    slug: 'Mini-Mart',
+    title: 'Mini-Mart',
+    type: 'Web App',
+    description: 'A fully functional web application dedicated to helping users purchase and sort through available products ',
+    year: '2024',
+    link: 'https://minibotmart.vercel.app/',
+    images: {
+      logo: '/images/minimart/logo.png',
+      main: '/images/minimart/minimart1.png',
+      supporting: [
+        '/images/minimart/minimart2.png',
+        '/images/minimart/minimart3.png',
+        '/images/minimart/minimart1.png'
+      ],
+      Logoimg: [
+        '/images/playsphere/next.png',
+        '/images/playsphere/react.png',
+        '/images/playsphere/tailwind.png',
+        '/images/playsphere/js.png'
+      ]
+    },
+    techStack: [
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'JavaScript'
+    ],
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
+  },
+  {
+    id: '3',
     slug: 'divaca-health',
     title: 'DivacaHealth By Divaca',
     type: 'Web App',
@@ -74,7 +105,7 @@ const works = [
     ]
   },
   {
-    id: '3',
+    id: '4',
     slug: 'portfolio-type-1',
     title: 'Portfolio Version 1',
     type: 'Website',
@@ -109,7 +140,7 @@ const works = [
     ]
   },
   {
-    id: '4',
+    id: '5',
     slug: 'livestock-management',
     title: 'Livestock Health Management System',
     type: 'Web App',
@@ -144,7 +175,7 @@ const works = [
     ]
   },
   {
-    id: '5',
+    id: '6',
     slug: 'weather-project',
     title: 'Weather Forecasting Project',
     type: 'Web App',
@@ -179,7 +210,7 @@ const works = [
     ]
   },
   {
-    id: '6',
+    id: '7',
     slug: 'housing-miniproject',
     title: 'Housing Miniproject',
     type: 'Website',
@@ -380,12 +411,12 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           <>
             <div className='w-full h-auto md:h-[400px] lg:h-[550px] xl:h-[650px] mt-6 md:mt-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10 z-10'>
               {project.images.supporting[0] && (
-                <div className='h-[300px] md:h-full w-full md:w-[40%] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10'>
+                <div className='h-[600px] md:h-full w-full  md:w-[40%] rounded-[30px] md:rounded-[40px] lg:rounded-[50px] z-10'>
                   <img src={project.images.supporting[0]} alt="" className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-none object-scale-down' />
                 </div>
               )}
               {project.images.supporting[1] && (
-                <div className='h-[300px] md:h-full w-full md:w-[40%]  md:rounded-[40px] lg:rounded-[50px] z-10'>
+                <div className='h-[600px] md:h-full w-full md:w-[40%]  md:rounded-[40px] lg:rounded-[50px] z-10'>
                   <img src={project.images.supporting[1]} alt="" className='w-full h-full rounded-[30px] md:rounded-[40px] lg:rounded-none object-scale-down' />
                 </div>
               )}

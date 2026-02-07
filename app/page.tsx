@@ -25,6 +25,7 @@ const titles = [
 
 const projects = [
   "/images/playsphere/playsphere4.png",
+  "/images/minimart/minimart1.png",
   "/images/divacahealth/divaca2.png",
   "/images/portfolio/portfolio2.png",
   "/images/livestock/livestock1.png",
@@ -41,8 +42,16 @@ const works = [
     image: "/images/playsphere/playsphere4.png",
     icon: "📱"
   },
-  {
+    {
     id: 2,
+    type: "WEB APP",
+    title: "Mini-Mart",
+    description: "Find whatever clothing product you are looking for ",
+    image: "/images/minimart/minimart1.png",
+    icon: "💻"
+  },
+  {
+    id: 3,
     type: "WEB APP",
     title: "DivacaHealth By Divaca",
     description: "Modern analytics for the modern world of healthcare",
@@ -50,7 +59,7 @@ const works = [
     icon: "💻"
   },
   {
-    id: 3,
+    id: 4,
     type: "Website",
     title: "Portfolio Version 1",
     description: "Manage your projects with ease",
@@ -58,7 +67,7 @@ const works = [
     icon: "💰"
   },
   {
-    id: 4,
+    id: 5,
     type: "WEB APP",
     title: "Livestock Health Management System",
     description: "A practical system for managing livestock health",
@@ -66,7 +75,7 @@ const works = [
     icon: "📚"
   },
   {
-    id: 5,
+    id: 6,
     type: "Web App",
     title: "Weather Forecasting Project",
     description: "Track your weather forecast progress",
@@ -74,7 +83,7 @@ const works = [
     icon: "📊"
   },
   {
-    id: 6,
+    id: 7,
     type: "website",
     title: "Housing Miniproject",
     description: "Your personal housing companion",
@@ -266,7 +275,7 @@ useEffect(() => {
 
       {/* Projects*/}
       <div className="bg-white/5 w-[95%] md:w-[85%] h-fit rounded-3xl">
-        <div className="min-h-screen bg-black p-5 sm:p-8 sm:bg-red-500 rounded-3xl">
+        <div className="min-h-screen bg-black p-5 sm:p-8 rounded-3xl">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-5">
               {works.map((work) => (
