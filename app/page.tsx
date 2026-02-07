@@ -205,7 +205,7 @@ useEffect(() => {
         </div>
 
         {/* HERO */}
-        <div className="w-full sm:w-[85%] lg:w-[80%] flex flex-col gap-7 items-center justify-center sm:mt-20 mt-20 ">
+        <div className="w-full sm:w-[85%] lg:w-[80%] flex flex-col gap-5 items-center justify-center sm:mt-20 mt-20 ">
           <section className="relative overflow-hidden rounded-[30px] sm:rounded-[40px] w-full sm:w-[70%] lg:w-[50%] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center">
 
             {/* PROFILE IMAGE (SEPARATE) */}
