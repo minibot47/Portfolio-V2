@@ -24,6 +24,7 @@ const titles = [
 ];
 
 const projects = [
+  "/images/plannr/plannr.png",
   "/images/playsphere/playsphere4.png",
   "/images/minimart/minimart1.png",
   "/images/divacahealth/divaca2.png",
@@ -37,13 +38,21 @@ const works = [
   {
     id: 1,
     type: "WEB APP",
+    title: "Plannr",
+    description: "Show the possiblity of your business",
+    image: "/images/plannr/plannr.png",
+    icon: "📱"
+  },
+  {
+    id: 2,
+    type: "WEB APP",
     title: "Playsphere By Divaca",
     description: "Navigate the world of proper Game Management",
     image: "/images/playsphere/playsphere4.png",
     icon: "📱"
   },
     {
-    id: 2,
+    id: 3,
     type: "WEB APP",
     title: "Mini-Mart",
     description: "Find whatever clothing product you are looking for ",
@@ -51,7 +60,7 @@ const works = [
     icon: "💻"
   },
   {
-    id: 3,
+    id: 4,
     type: "WEB APP",
     title: "DivacaHealth By Divaca",
     description: "Modern analytics for the modern world of healthcare",
@@ -59,7 +68,7 @@ const works = [
     icon: "💻"
   },
   {
-    id: 4,
+    id: 5,
     type: "Website",
     title: "Portfolio Version 1",
     description: "Manage your projects with ease",
@@ -67,7 +76,7 @@ const works = [
     icon: "💰"
   },
   {
-    id: 5,
+    id: 6,
     type: "WEB APP",
     title: "Livestock Health Management System",
     description: "A practical system for managing livestock health",
@@ -75,7 +84,7 @@ const works = [
     icon: "📚"
   },
   {
-    id: 6,
+    id: 7,
     type: "Web App",
     title: "Weather Forecasting Project",
     description: "Track your weather forecast progress",
@@ -83,7 +92,7 @@ const works = [
     icon: "📊"
   },
   {
-    id: 7,
+    id: 8,
     type: "website",
     title: "Housing Miniproject",
     description: "Your personal housing companion",
@@ -166,7 +175,7 @@ useEffect(() => {
         }`}>
           <div className="text-white text-center sm:text-left w-full sm:w-auto mb-2 sm:mb-0">
             <h1 className="text-lg sm:text-xl lg:text-2xl font-quintessential font-semibold">TOLULOPE DAIRO</h1>
-            <div className="relative h-5 sm:h-6 overflow-hidden">
+            <div className="relative h-fit sm:h-6 w-full ">
               {titles.map((title, index) => (
                 <h3
                   key={index}

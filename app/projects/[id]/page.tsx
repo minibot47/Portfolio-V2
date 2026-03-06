@@ -9,11 +9,42 @@ import { useRouter } from "next/router";
 const works = [
   {
     id: '1',
+    slug: 'Planr',
+    title: 'Plannr',
+    type: 'Web App',
+    description: 'A fully functional web application showcasing how a Business would display their services rendered, Team and Positions Available',
+    year: '2026',
+    link: 'https://plannr-five.vercel.app/',
+    images: {
+      logo: '/images/plannr/logo.png',
+      main: '/images/plannr/plannr.png',
+      supporting: [
+        '/images/plannr/plannr1.png',
+        '/images/plannr/plannr2.png',
+        '/images/plannr/plannr3.png'
+      ],
+      Logoimg: [
+        '/images/playsphere/next.png',
+        '/images/playsphere/react.png',
+        '/images/playsphere/tailwind.png',
+        '/images/playsphere/js.png'
+      ]
+    },
+    techStack: [
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'JavaScript'
+    ],
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
+  },
+  {
+    id: '2',
     slug: 'playsphere',
     title: 'Playsphere By Divaca',
     type: 'Web App',
     description: 'A fully functional web application dedicated to helping Gamers and managers to edit , createand manage games and tournaments',
-    year: '2024',
+    year: '2025',
     link: 'https://playsphere.vercel.app/',
     images: {
       logo: '/images/playsphere/logo.png',
@@ -39,12 +70,12 @@ const works = [
     devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
   },
   {
-    id: '2',
+    id: '3',
     slug: 'Mini-Mart',
     title: 'Mini-Mart',
     type: 'Web App',
     description: 'A fully functional web application dedicated to helping users purchase and sort through available products ',
-    year: '2024',
+    year: '2026',
     link: 'https://minibotmart.vercel.app/',
     images: {
       logo: '/images/minimart/logo.png',
@@ -70,12 +101,12 @@ const works = [
     devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
   },
   {
-    id: '3',
+    id: '4',
     slug: 'divaca-health',
     title: 'DivacaHealth By Divaca',
     type: 'Web App',
     description: 'A fully functional web application dedicated to helping healthcare professionals to manage patients, appointments, and medical records',
-    year: '2024',
+    year: '2025',
     link: 'https://www.divacahealth.com/',
     images: {
       logo: '/images/divacahealth/logo.png',
@@ -105,12 +136,12 @@ const works = [
     ]
   },
   {
-    id: '4',
+    id: '5',
     slug: 'portfolio-type-1',
     title: 'Portfolio Version 1',
     type: 'Website',
     description: 'A fully functional website dedicated to helping professionals to manage their projects, tasks, and goals',
-    year: '2023',
+    year: '2025',
     link: 'https://portfolio-one-lilac-25.vercel.app/',
     images: {
       logo: '/images/portfolio/logo.png',
@@ -140,12 +171,12 @@ const works = [
     ]
   },
   {
-    id: '5',
+    id: '6',
     slug: 'livestock-management',
     title: 'Livestock Health Management System',
     type: 'Web App',
     description: 'A fully functional web application dedicated to helping farmers to manage their livestock health',
-    year: '2023',
+    year: '2024',
     link: 'https://final-year-project-navy-three.vercel.app/',
     images: {
       logo: '/images/livestock/logo.png',
@@ -175,7 +206,7 @@ const works = [
     ]
   },
   {
-    id: '6',
+    id: '7',
     slug: 'weather-project',
     title: 'Weather Forecasting Project',
     type: 'Web App',
@@ -210,12 +241,12 @@ const works = [
     ]
   },
   {
-    id: '7',
+    id: '8',
     slug: 'housing-miniproject',
     title: 'Housing Miniproject',
     type: 'Website',
     description: 'A fully functional minimalistic website dedicated to helping users to find and rent a house',
-    year: '2022',
+    year: '2023',
     link: 'https://react-housing-project.onrender.com/',
     images: {
       logo: '/images/housing/logo.png',
@@ -307,7 +338,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
       }`}>
         <div className="text-white w-full md:w-auto text-center md:text-left mb-2 md:mb-0">
           <h1 className="text-lg md:text-2xl font-quintessential font-semibold">TOLULOPE DAIRO</h1>
-          <div className="relative h-5 md:h-6 overflow-hidden">
+          <div className="relative h-fit sm:h-6 w-full">
             {titles.map((title, index) => (
               <h3
                 key={index}
