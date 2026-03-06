@@ -24,7 +24,7 @@ const titles = [
 ];
 
 const projects = [
-  "/images/plannr/plannr.png",
+  "/images/plannr/Plannr.png",
   "/images/playsphere/playsphere4.png",
   "/images/minimart/minimart1.png",
   "/images/divacahealth/divaca2.png",
@@ -40,7 +40,7 @@ const works = [
     type: "WEB APP",
     title: "Plannr",
     description: "Show the possiblity of your business",
-    image: "/images/plannr/plannr.png",
+    image: "/images/plannr/Plannr.png",
     icon: "📱"
   },
   {
@@ -170,7 +170,7 @@ useEffect(() => {
       <div className="w-[95%] md:w-[90%] lg:w-[80%] min-h-screen flex flex-col items-center gap-5">
 
         {/* TOP BAR */}
-        <div className={`w-[95%] sm:w-[85%] lg:w-[70%] h-auto sm:h-[70px] rounded-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 py-3 sm:py-0 fixed top-2 sm:top-5 z-50 transition-transform duration-500 ease-in-out ${
+        <div className={`w-[95%] sm:w-[85%] lg:w-[70%] h-auto sm:h-[70px] rounded-full flex flex-col sm:flex-row justify-between gap-4 items-center px-4 sm:px-8 py-3 sm:py-2 fixed top-2 sm:top-5 z-50 transition-transform duration-500 ease-in-out ${
           showNav ? 'translate-y-0' : '-translate-y-32'
         }`}>
           <div className="text-white text-center sm:text-left w-full sm:w-auto mb-2 sm:mb-0">

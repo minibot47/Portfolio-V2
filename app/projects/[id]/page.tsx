@@ -333,7 +333,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
   return (
     <div className="min-h-screen bg-black p-4 md:p-8 flex flex-col items-center max-w-[1400px] m-auto">
       {/* TOP BAR */}
-      <div className={`w-[95%] md:w-[90%] lg:w-[70%] h-auto md:h-[70px] rounded-full flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-3 md:py-0 fixed top-2 md:top-5 z-50 transition-transform duration-500 ease-in-out ${
+      <div className={`w-[95%] md:w-[90%] lg:w-[70%] h-auto md:h-[70px] rounded-full flex flex-col md:flex-row justify-between gap-4 items-center px-4 md:px-8 py-3 md:py-2 fixed top-2 md:top-5 z-50 transition-transform duration-500 ease-in-out ${
         showNav ? 'translate-y-0' : '-translate-y-32'
       }`}>
         <div className="text-white w-full md:w-auto text-center md:text-left mb-2 md:mb-0">
