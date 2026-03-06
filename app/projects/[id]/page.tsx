@@ -17,7 +17,7 @@ const works = [
     link: 'https://plannr-five.vercel.app/',
     images: {
       logo: '/images/plannr/logo.png',
-      main: '/images/plannr/plannr.png',
+      main: '/images/plannr/Plannr.png',
       supporting: [
         '/images/plannr/plannr1.png',
         '/images/plannr/plannr2.png',
