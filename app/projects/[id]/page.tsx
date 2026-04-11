@@ -40,6 +40,96 @@ const works = [
   },
   {
     id: '2',
+    slug: 'Oshodilive',
+    title: 'Oshodi-Live',
+    type: 'Web App',
+    description: 'Discover the best deals on phones, laptops, gadgets and accessories. Fast delivery. Shop now at Oshodi.',
+    year: '2026',
+    link: 'https://oshodimvp.vercel.app/',
+    images: {
+      logo: '/images/oshodi/logo.png',
+      main: '/images/oshodi/oshodi.png',
+      supporting: [
+        '/images/oshodi/oshodi1.png',
+        '/images/oshodi/oshodi2.png'
+      ],
+      Logoimg: [
+        '/images/playsphere/next.png',
+        '/images/playsphere/react.png',
+        '/images/playsphere/tailwind.png',
+        '/images/playsphere/js.png'
+      ]
+    },
+    techStack: [
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'JavaScript'
+    ],
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
+  },
+  {
+    id: '3',
+    slug: 'Royal Medicare',
+    title: 'Royal Medicare',
+    type: 'Web App',
+    description: 'Round-the-clock nursing and personal care for seniors in Ikorodu, Lagos.',
+    year: '2026',
+    link: 'https://royalmedicare.vercel.app/',
+    images: {
+      logo: '/images/royal/logo.png',
+      main: '/images/royal/Royalmedicare.png',
+      supporting: [
+        '/images/royal/Royalmedicare1.png',
+        '/images/royal/Royalmedicare2.png',
+      ],
+      Logoimg: [
+        '/images/playsphere/next.png',
+        '/images/playsphere/react.png',
+        '/images/playsphere/tailwind.png',
+        '/images/playsphere/js.png'
+      ]
+    },
+    techStack: [
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'JavaScript'
+    ],
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
+  },
+  {
+    id: '4',
+    slug: 'Eldernest Care',
+    title: 'Eldernest Care',
+    type: 'Web App',
+    description: 'ElderNest Care offers a curated, home-like experience for seniors in Yaba, Lagos. From chef-inspired meals to on-call health professionals, we blend hospitality with expert care.',
+    year: '2026',
+    link: 'https://eldernest-care.vercel.app/',
+    images: {
+      logo: '/images/eldernest/logo.png',
+      main: '/images/eldernest/eldernest.png',
+      supporting: [
+        '/images/eldernest/eldernest1.png',
+        '/images/eldernest/eldernest2.png',
+      ],
+      Logoimg: [
+        '/images/playsphere/next.png',
+        '/images/playsphere/react.png',
+        '/images/playsphere/tailwind.png',
+        '/images/playsphere/js.png'
+      ]
+    },
+    techStack: [
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'JavaScript'
+    ],
+    devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
+  },
+  {
+    id: '5',
     slug: 'playsphere',
     title: 'Playsphere By Divaca',
     type: 'Web App',
@@ -70,7 +160,7 @@ const works = [
     devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
   },
   {
-    id: '3',
+    id: '6',
     slug: 'Mini-Mart',
     title: 'Mini-Mart',
     type: 'Web App',
@@ -101,7 +191,7 @@ const works = [
     devInfo: 'Using Next.js, React, Tailwind CSS, and JavaScript, The projected was created to help Gamers and managers to edit , create and manage games and tournaments',
   },
   {
-    id: '4',
+    id: '7',
     slug: 'divaca-health',
     title: 'DivacaHealth By Divaca',
     type: 'Web App',
@@ -136,7 +226,7 @@ const works = [
     ]
   },
   {
-    id: '5',
+    id: '8',
     slug: 'portfolio-type-1',
     title: 'Portfolio Version 1',
     type: 'Website',
@@ -171,7 +261,7 @@ const works = [
     ]
   },
   {
-    id: '6',
+    id: '9',
     slug: 'livestock-management',
     title: 'Livestock Health Management System',
     type: 'Web App',
@@ -206,7 +296,7 @@ const works = [
     ]
   },
   {
-    id: '7',
+    id: '10',
     slug: 'weather-project',
     title: 'Weather Forecasting Project',
     type: 'Web App',
@@ -241,7 +331,7 @@ const works = [
     ]
   },
   {
-    id: '8',
+    id: '11',
     slug: 'housing-miniproject',
     title: 'Housing Miniproject',
     type: 'Website',

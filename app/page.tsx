@@ -25,13 +25,14 @@ const titles = [
 
 const projects = [
   "/images/plannr/Plannr.png",
+  "/images/oshodi/oshodi.png",
+  "/images/royal/Royalmedicare.png",
+  "/images/eldernest/eldernest.png",
   "/images/playsphere/playsphere4.png",
   "/images/minimart/minimart1.png",
   "/images/divacahealth/divaca2.png",
   "/images/portfolio/portfolio2.png",
-  "/images/livestock/livestock1.png",
   "/images/weather/weather1.png",
-  "/images/housing/housing1.png",
 ];
 
 const works = [
@@ -46,13 +47,37 @@ const works = [
   {
     id: 2,
     type: "WEB APP",
+    title: "Oshodi-Live",
+    description: "Discover the best deals on phones, laptops, gadgets and accessories. Fast delivery. Shop now at Oshodi.",
+    image: "/images/oshodi/oshodi.png",
+    icon: "📱"
+  },
+  {
+    id: 3,
+    type: "WEB APP",
+    title: "Royal Medicare",
+    description: "Round-the-clock nursing and personal care for seniors in Ikorodu, Lagos.",
+    image: "/images/royal/Royalmedicare.png",
+    icon: "📱"
+  },
+  {
+    id: 4,
+    type: "WEB APP",
+    title: "Eldernest Care",
+    description: "ElderNest Care offers a curated, home-like experience for seniors in Yaba, Lagos. From chef-inspired meals to on-call health professionals, we blend hospitality with expert care.",
+    image: "/images/eldernest/eldernest.png",
+    icon: "📱"
+  },
+  {
+    id: 5,
+    type: "WEB APP",
     title: "Playsphere By Divaca",
     description: "Navigate the world of proper Game Management",
     image: "/images/playsphere/playsphere4.png",
     icon: "📱"
   },
     {
-    id: 3,
+    id: 6,
     type: "WEB APP",
     title: "Mini-Mart",
     description: "Find whatever clothing product you are looking for ",
@@ -60,7 +85,7 @@ const works = [
     icon: "💻"
   },
   {
-    id: 4,
+    id: 7,
     type: "WEB APP",
     title: "DivacaHealth By Divaca",
     description: "Modern analytics for the modern world of healthcare",
@@ -68,7 +93,7 @@ const works = [
     icon: "💻"
   },
   {
-    id: 5,
+    id: 8,
     type: "Website",
     title: "Portfolio Version 1",
     description: "Manage your projects with ease",
@@ -76,7 +101,7 @@ const works = [
     icon: "💰"
   },
   {
-    id: 6,
+    id: 9,
     type: "WEB APP",
     title: "Livestock Health Management System",
     description: "A practical system for managing livestock health",
@@ -84,7 +109,7 @@ const works = [
     icon: "📚"
   },
   {
-    id: 7,
+    id: 10,
     type: "Web App",
     title: "Weather Forecasting Project",
     description: "Track your weather forecast progress",
@@ -92,7 +117,7 @@ const works = [
     icon: "📊"
   },
   {
-    id: 8,
+    id: 11,
     type: "website",
     title: "Housing Miniproject",
     description: "Your personal housing companion",

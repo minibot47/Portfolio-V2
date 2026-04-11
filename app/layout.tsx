@@ -1,12 +1,42 @@
 import "./globals.css";
+import type { Metadata } from "next";
 import { Inter, Poppins, Fira_Code, Playfair_Display, Quintessential ,Londrina_Shadow  } from "next/font/google";
 import Starfield from "./components/starfield";
 
-export const metadata = {
-  title: 'Tolulope Dairo',
-  description: 'My Next.js Portfolio',
+export const metadata: Metadata = {
+  metadataBase: new URL("https://tolulope-dairo.vercel.app"),
+
+  title: "Tolulope Dairo",
+  description:
+    "Portfolio website built by Tolulope Dairo, showcasing skills developed over the years.",
+
   icons: {
-    icon: '/images/icon.png', 
+    icon: "/images/icon.png",
+    shortcut: "/images/icon.png",
+    apple: "/images/icon.png",
+  },
+
+  openGraph: {
+    title: "Tolulope Dairo - Portfolio Website",
+    description: "Learn more about projects built by Tolulope Dairo",
+    url: "https://tolulope-dairo.vercel.app/",
+    siteName: "Tolulope Dairo Portfolio",
+    locale: "en_NG",
+    type: "website",
+    images: [
+      {
+        url: "/images/meta.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Tolulope Dairo - Portfolio Website",
+    description: "Learn more about projects built by Tolulope Dairo",
+    images: ["/images/meta.jpg"],
   },
 };
 
