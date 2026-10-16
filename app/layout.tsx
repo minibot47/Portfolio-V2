@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Poppins, Fira_Code, Playfair_Display, Quintessential ,Londrina_Shadow  } from "next/font/google";
 import Starfield from "./components/starfield";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tolulope-dairo.vercel.app"),
@@ -82,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${poppins.variable} ${firaCode.variable} ${playfair.variable} ${quintessential.variable} ${londrinaShadow.variable} bg-black`}>
         <Starfield />
         {children}
+        <Analytics />
       </body>
     </html>
   );
